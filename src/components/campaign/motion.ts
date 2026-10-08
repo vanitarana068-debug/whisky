@@ -31,7 +31,7 @@ export function loadMotion() {
 /** Lenis drives the page scroll; GSAP's ticker feeds it so scrubbed timelines stay in lockstep. */
 export async function startSmoothScroll({ gsap, ScrollTrigger }: Motion) {
   const { default: LenisCtor } = await import('lenis');
-  const instance = new LenisCtor({ lerp: 0.085, wheelMultiplier: 0.9, anchors: { offset: -88, duration: 1.8 }, autoRaf: false });
+  const instance = new LenisCtor({ lerp: 0.085, wheelMultiplier: 0.9, anchors: { offset: 100, duration: 1.8 }, autoRaf: false });
   instance.on('scroll', ScrollTrigger.update);
   const tick = (time: number) => instance.raf(time * 1000);
   gsap.ticker.add(tick);

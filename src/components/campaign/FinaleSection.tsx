@@ -13,12 +13,12 @@ export function FinaleSection() {
     gsap.set('.finale-logo .brand-symbol', { filter: 'drop-shadow(0 0 0 rgba(230,170,80,0))' });
 
     const film = gsap.timeline({ defaults: { ease: 'power2.inOut' }, scrollTrigger: { trigger: root, start: 'top top', end: 'bottom bottom', scrub: 1.1 } });
-    film.to('.finale-glass', { opacity: 1, scale: 1, duration: 2.4 }, 0.2)
-      .to(lines, { yPercent: 0, duration: 1.6, stagger: 0.7, ease: 'power3.out' }, 2.4)
-      .to('.finale-cta', { opacity: 1, y: 0, duration: 1.1 }, 5.2)
-      .to('.finale-logo', { opacity: 1, y: 0, letterSpacing: '0.2em', duration: 1.8 }, 6.4)
-      .to('.finale-logo .brand-symbol', { filter: 'drop-shadow(0 0 14px rgba(230,170,80,.55))', duration: 1.6 }, 7)
-      .to({}, { duration: 0.01 }, 9.99);
+    film.to('.finale-glass', { opacity: 1, scale: 1, duration: 1.8 }, 0.1)
+      .to(lines, { yPercent: 0, duration: 1.4, stagger: 0.6, ease: 'power3.out' }, 1.6)
+      .to('.finale-cta', { opacity: 1, y: 0, duration: 0.9 }, 2.8)
+      .to('.finale-logo', { opacity: 1, y: 0, letterSpacing: '0.2em', duration: 1.6 }, 4.4)
+      .to('.finale-logo .brand-symbol', { filter: 'drop-shadow(0 0 14px rgba(230,170,80,.55))', duration: 1.4 }, 5.2)
+      .to({}, { duration: 0.01 }, 7.99);
   });
 
   return <section ref={ref} className="finale pin-track" aria-labelledby="finale-title">
